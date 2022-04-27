@@ -6,8 +6,8 @@ from  ddt import ddt,data,unpack,file_data
 class loginCass(unittest.TestCase):
      # @data(('zhangsan','123456'),('lisi','123456'))
      # @unpack
-     @file_data('login01.yaml')
-     def test_login(self,username,password):
+     @file_data('../data/login01.yaml')
+     def test_login04(self,username,password):
           data = {"username":username,"password":password}
           print(data)
 

@@ -6,8 +6,8 @@ from ddt import ddt, data, unpack, file_data
 @ddt
 class loginCass(unittest.TestCase):
 
-    @file_data('login.yaml')
-    def test_login02(self, loginName, encryption, yzm, userType, msgCode):
+    @file_data('../data/login.yaml')
+    def test_login03(self, loginName, encryption, yzm, userType, msgCode):
         data = dict(loginName=loginName, encryption=encryption, yzm=yzm, userType=userType, msgCode=msgCode)
         url = 'https://cms-api-test.jiaoyoushow.com/userInfo/checkPhoneLoginPost'
         res = requests.post(url, json=data)
